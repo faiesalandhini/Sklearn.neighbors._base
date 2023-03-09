@@ -1,0 +1,14 @@
+I get some error last day from my research
+
+ImportError: cannot import name '_check_weights' from 'sklearn.neighbors._base' (/usr/local/lib/python3.9/dist-packages/sklearn/neighbors/_base.py)
+
+import matplotlib.pyplot as plt
+import sys
+import sklearn.neighbors._base
+sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
+
+from missingpy import MissForest
+
+warnings.filterwarnings('ignore')
+
+but, i got the solution. u can install sklearn version with !pip install scikit-learn==0.22
